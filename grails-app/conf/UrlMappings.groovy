@@ -1,11 +1,36 @@
 class UrlMappings {
     static mappings = {
-      "/$controller/$action?/$id?"{
-	      constraints {
-			 // apply constraints here
-		  }
-	  }
-      "/"(view:"/index")
-	  "500"(view:'/error')
+        "/register"(controller: "register", action: "index")
+        "/register/$action?"(controller: "register")
+		"/profile"(controller: "user", action: "profile")
+		"/admin"(controller: "admin")
+		"/admin/login"(controller: "login", action: "index")
+		"/admin/login/$action?"(controller: "login")
+		"/admin/logout"(controller: "logout")
+		"/admin/createWeblog"(controller: "blog", action: "create")
+		"/admin/saveWeblog"(controller: "blog", action: "save")
+		"/admin/authoring/weblogConfig"(controller: "blog", action: "edit")
+		"/admin/authoring/entries"(controller: "entry", action: "list")
+		"/admin/authoring/entryAdd"(controller: "entry", action: "create")
+		"/admin/authoring/entrySave"(controller: "entry", action: "save")
+		"/admin/authoring/entryEdit"(controller: "entry", action: "edit")
+		"/admin/authoring/entryUpdate"(controller: "entry", action: "update")
+		"/admin/authoring/entryRemove"(controller: "entry", action: "delete")
+		"/admin/authoring/categories"(controller: "category", action: "list")
+		"/admin/authoring/categoryAdd"(controller: "category", action: "create")
+		"/admin/authoring/categorySave"(controller: "category", action: "save")
+		"/admin/authoring/categoryEdit"(controller: "category", action: "edit")
+		"/admin/authoring/categoryUpdate"(controller: "category", action: "update")
+		"/admin/authoring/categoryRemove"(controller: "category", action: "delete")
+		"/admin/authoring/comments"(controller: "comment", action: "list")
+		"/admin/system/users"(controller: "user", action: "list")
+		"/$blog"(controller: "blog", action: "show")
+		"/$blog/category/$category"(controller: "blog", action: "showByCategory")
+		"/$blog/entry/$url"(controller: "blog", action: "showByUrl")
+		"/$blog/date/$date"(controller: "blog", action: "showByDate")
+		"/$controller/$action?/$id?"()
+		"/"(view:"/index")
+		"403"(view:'/403')
+		"500"(view:'/error')
 	}
 }
