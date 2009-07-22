@@ -87,7 +87,7 @@
         </tr>
             <td class="label"><label for="locale" />本地化设置</label></td>
             <td class="field">
-               <s:localeSelect name="locale" value=""/>
+               <gx:localeSelect name="locale" value=""/>
             </td>
             <td class="description">您的预置本地化设置。</td>
         </tr>
@@ -95,7 +95,7 @@
         <tr>
             <td class="label"><label for="timeZone" />时区</label></td>
             <td class="field">
-               <s:timeZoneSelect name="timeZone"/>
+               <gx:timeZoneSelect name="timeZone"/>
             </td>
             <td class="description">您的时区。</td>
 
@@ -107,7 +107,7 @@
 
     <input type="submit" name="update" value="保存个人资料"/>
 
-    <input type="button" name="cancel" value="取消" onclick="window.location='${createLink(controller:'action')}'" />
+    <input type="button" name="cancel" value="取消" onclick="window.location='${createLink(controller:'admin')}'" />
 
 </g:form>
 
